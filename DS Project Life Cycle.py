@@ -7,8 +7,9 @@ DATA SCIENCE PROJECT LIFE CYCLE:
         -> Feature Selection
             -> Model Training
                 -> Hyper-Parameter Tuning
-                    -> Model Deployment
-                        -> Incremental Learning
+                    -> Model Evaluation
+                        -> Model Deployment
+                            -> Incremental Learning
 
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -184,12 +185,29 @@ MODEL IMPROVEMENT:
 
 
 -----------------------------------------------------------------------------------------------------------------------
-MEASURING MODEL QUALITY:
+MODEL EVALUATION:
 -----------------------------------------------------------------------------------------------------------------------
-1. Mean Absolute Error (MAE):
-        from sklearn.metrics import mean_absolute_error
+Regression:
+    1. Mean Absolute Error (MAE):
+            from sklearn.metrics import mean_absolute_error
 
-2. Mean Squared Error (MSE):
-        from sklearn.metrics import mean_squared_error
+    2. Mean Squared Error (MSE):
+            from sklearn.metrics import mean_squared_error
 
+    3. Mean Squared Log Error (MSE):
+            from sklearn.metrics import mean_squared_log_error
+
+Classification:
+    1. Accuracy Score:
+            from sklearn.metrics import accuracy_score
+
+    2. Confusion Matrix:
+            from sklearn.metrics import confusion_matrix, classification_report
+
+    3. Precision, Recall:
+            from sklearn.metrics import precision_score, recall_score, precision_recall_curve
+
+    4. ROC, AUC:
+            from sklearn.metrics import roc_curve, roc_auc_score, plot_roc_curve
 """
+
