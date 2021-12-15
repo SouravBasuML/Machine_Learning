@@ -2,17 +2,17 @@
 -----------------------------------------------------------------------------------------------------------------------
 Confusion Matrix:
 -----------------------------------------------------------------------------------------------------------------------
-A confusion matrix is a n x n matrix, such that each element is equal to the number of observations known to be in
+A confusion matrix is an n x n matrix, such that each element is equal to the number of observations known to be in
 group i and predicted to be in group j. The size of the confusion matrix is decided by the number of classes (n)
 we need to predict.
 
-True Positive: You predicted positive and it’s true.
+True Positive: You predicted positive, and it’s true.
                e.g. patients have cancer and algorithm predicted that they have cancer
-True Negative: You predicted negative and it’s true.
+True Negative: You predicted negative, and it’s true.
                e.g. patients don't have cancer and algorithm predicted that they don't have cancer
-False Positive: (Type 1 Error): You predicted positive and it’s false.
+False Positive: (Type 1 Error): You predicted positive, and it’s false.
                e.g. patients don't have cancer, but algorithm predicted that they have cancer
-False Negative: (Type 2 Error): You predicted negative and it’s false.
+False Negative: (Type 2 Error): You predicted negative, and it’s false.
                e.g. patients have cancer, but algorithm predicted that they don't have cancer
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -71,7 +71,7 @@ from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import load_digits
 from sklearn.metrics import confusion_matrix, classification_report
-import seaborn as sn
+import seaborn as sns
 
 
 if __name__ == '__main__':
@@ -92,7 +92,7 @@ if __name__ == '__main__':
     print('\nClassification Report:\n', classification_report(y_true=y_test, y_pred=y_predicted, target_names=label))
 
     plt.figure(figsize=(10, 7))
-    sn.heatmap(conf_matrix, annot=True)
+    sns.heatmap(conf_matrix, annot=True)
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.show()
